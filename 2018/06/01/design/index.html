@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="dream">
-<meta property="og:url" content="https://xiangboit.github.io/index.html">
+<meta name="description" content="设计模式模式是在某个情境下，针对某问题的某种解决方案模式不是代码，是针对特定问题的通用解决方案模式不是被发明，而是被发现模式分类创建型模式创建型模式涉及到对象实例化，这类模式都提供一个方法，将客户从所需要实例化的对象中解耦。 单件模式（Single Pattern）抽象工厂模式（Abstract Factory）建造者模式（Builder Pattern）工厂方法（Factory Method）原">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初探设计模式">
+<meta property="og:url" content="https://xiangboit.github.io/2018/06/01/design/index.html">
 <meta property="og:site_name" content="dream">
+<meta property="og:description" content="设计模式模式是在某个情境下，针对某问题的某种解决方案模式不是代码，是针对特定问题的通用解决方案模式不是被发明，而是被发现模式分类创建型模式创建型模式涉及到对象实例化，这类模式都提供一个方法，将客户从所需要实例化的对象中解耦。 单件模式（Single Pattern）抽象工厂模式（Abstract Factory）建造者模式（Builder Pattern）工厂方法（Factory Method）原">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-01T06:18:19.878Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dream">
+<meta name="twitter:title" content="初探设计模式">
+<meta name="twitter:description" content="设计模式模式是在某个情境下，针对某问题的某种解决方案模式不是代码，是针对特定问题的通用解决方案模式不是被发明，而是被发现模式分类创建型模式创建型模式涉及到对象实例化，这类模式都提供一个方法，将客户从所需要实例化的对象中解耦。 单件模式（Single Pattern）抽象工厂模式（Abstract Factory）建造者模式（Builder Pattern）工厂方法（Factory Method）原">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://xiangboit.github.io/"/>
+  <link rel="canonical" href="https://xiangboit.github.io/2018/06/01/design/"/>
 
 
 
 
 
-  <title>dream</title>
+  <title>初探设计模式 | dream</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/dream.github.io/2018/06/01/design/" itemprop="url">初探设计模式</a></h1>
+          <h1 class="post-title" itemprop="name headline">初探设计模式</h1>
         
 
         <div class="post-meta">
@@ -298,9 +300,7 @@
       
 
       
-        
-          
-            <p>设计模式<br>模式是在某个情境下，针对某问题的某种解决方案<br>模式不是代码，是针对特定问题的通用解决方案<br>模式不是被发明，而是被发现<br>模式分类<br>创建型模式<br>创建型模式涉及到对象实例化，这类模式都提供一个方法，将客户从所需要实例化的对象中解耦。</p>
+        <p>设计模式<br>模式是在某个情境下，针对某问题的某种解决方案<br>模式不是代码，是针对特定问题的通用解决方案<br>模式不是被发明，而是被发现<br>模式分类<br>创建型模式<br>创建型模式涉及到对象实例化，这类模式都提供一个方法，将客户从所需要实例化的对象中解耦。</p>
 <p>单件模式（Single Pattern）<br>抽象工厂模式（Abstract Factory）<br>建造者模式（Builder Pattern）<br>工厂方法（Factory Method）<br>原型模式（Protype Pattern）<br>行为型模式<br>类和对象如何交互和分配职责</p>
 <p>策略模式(Strategy)</p>
 <p>状态模式(State)</p>
@@ -463,8 +463,6 @@
 <p>Java代码实现</p>
 <p>#定义一个Strategy接口，其中定义一个方法，用于计算。<br>　<br>　public interface Strategy<br>　{<br>　public int calculate(int a, int b);<br>　<br>　}<br>　<br>　#定义具体的算法类，实现Strategy接口，算法类中的算法各自不同：加减乘等，但是外部调用形式符合接口的定义。<br>　//加法<br>　public class AddStrategy implements Strategy<br>　{<br>　<br>　@Override<br>　public int calculate(int a, int b)<br>　{<br>　return a + b;<br>　}<br>　<br>　}<br>　//减法<br>　public class SubtractStrategy implements Strategy<br>　{<br>　<br>　@Override<br>　public int calculate(int a, int b)<br>　{<br>　<br>　return a - b;<br>　}<br>　<br>　}<br>　<br>　// 乘法<br>　public class MultiplyStrategy implements Strategy<br>　{<br>　<br>　@Override<br>　public int calculate(int a, int b)<br>　{<br>　return a * b;<br>　}<br>　<br>　}<br>　<br>　#定义具体的环境角色，持有Strategy接口的引用，并且有get和set方法可以完成策略更换。在环境角色中调用接口的方法完成动作。<br>　<br>　public class Environment<br>　{<br>　private Strategy strategy;<br>　<br>　public Environment(Strategy strategy)<br>　{<br>　this.strategy = strategy;<br>　}<br>　<br>　public Strategy getStrategy()<br>　{<br>　return strategy;<br>　}<br>　<br>　public void setStrategy(Strategy strategy)<br>　{<br>　this.strategy = strategy;<br>　}<br>　<br>　public int calculate(int a, int b)<br>　{<br>　return strategy.calculate(a, b);<br>　}<br>　}<br>　<br>　#这样在Client外部调用时，只需向环境角色设置相应的算法类，然后就可以得到相应的结果。<br>　<br>　public class Client<br>　{<br>　public static void main(String[] args)<br>　{<br>　<br>　AddStrategy addStrategy = new AddStrategy();<br>　Environment environment = new Environment(addStrategy);<br>　System.out.println(environment.calculate(4, 3));<br>　<br>　//减法<br>　SubtractStrategy subStrategy = new SubtractStrategy();<br>　environment.setStrategy(subStrategy);<br>　System.out.println(environment.calculate(4, 3));<br>　<br>　//乘法<br>　MultiplyStrategy multiplyStrategy = new MultiplyStrategy();<br>　environment.setStrategy(multiplyStrategy);<br>　System.out.println(environment.calculate(4, 3));<br>　}<br>　<br>　}<br>　Python 代码实现<br>　#!/usr/bin/python<br>　#环境角色<br>　class Duck:<br>　def display(self):<br>　pass<br>　<br>　def setFlyBehavior(self,fb):<br>　self.flyBehavior = fb<br>　<br>　def setQuackBehavior(self,qb):<br>　self.quackBehavior = qb<br>　<br>　def performQuack(self):<br>　self.quackBehavior.quack()<br>　<br>　def performFly(self):<br>　self.flyBehavior.fly()<br>　<br>　<br>　<br>　#抽象策略角色<br>　class FlyBehavior:<br>　def fly(self):<br>　pass<br>　#具体策略角色<br>　class FlyWithWings(FlyBehavior):<br>　def fly(self):<br>　print “Fly with wings.”<br>　#具体策略角色<br>　class FlyNoWay(FlyBehavior):<br>　def fly(self):<br>　print “Fly no way.”<br>　<br>　<br>　#抽象策略角色<br>　class QuackBehavior:<br>　def quack(self):<br>　pass<br>　#具体策略角色<br>　class Quack(QuackBehavior):<br>　def quack(self):<br>　print “gua gua”<br>　#具体策略角色<br>　class Squeak(QuackBehavior):<br>　def quack(self):<br>　print “zhi zhi”<br>　#具体策略角色<br>　class MuteQuack(QuackBehavior):<br>　def quack(self):<br>　print “nothing”<br>　<br>　<br>　#客户端<br>　class MallardDuck(Duck):<br>　def <strong>init</strong>(self):<br>　self.setFlyBehavior(FlyWithWings())<br>　self.setQuackBehavior(Squeak())<br>　<br>　def display(self):<br>　print “MallardDuck”<br>　<br>　class RedheadDuck(Duck):<br>　def <strong>init</strong>(self):<br>　self.setFlyBehavior(FlyWithWings())<br>　self.setQuackBehavior(Quack())<br>　<br>　def display(self):<br>　print “RedheadDuck”<br>　<br>　class RubberDuck(Duck):<br>　def <strong>init</strong>(self):<br>　self.setFlyBehavior(FlyNoWay())<br>　self.setQuackBehavior(MuteQuack())<br>　<br>　def display(self):<br>　print “RubberDuck”<br>　<br>　class DecoyDuck(Duck):<br>　def <strong>init</strong>(self):<br>　self.setFlyBehavior(FlyWithWings())<br>　self.setQuackBehavior(MuteQuack())<br>　<br>　def display(self):<br>　print “DecoyDuck”<br>　<br>　<br>　for n in MallardDuck(),RedheadDuck(),RubberDuck(),DecoyDuck():<br>　n.display()<br>　n.performFly()<br>　n.performQuack()<br>　print<br>　<br>　n.setFlyBehavior(FlyNoWay())<br>　n.setQuackBehavior(Quack())<br>　n.display()<br>　n.performFly()<br>　n.performQuack()<br>　代理模式<br>　远程代理<br>　虚拟代理<br>　定义<br>　代理模式为另一个对象提供一个替身或者占位符以控制对这个对象的访问。<br>　应用<br>　控制对象访问<br>　java.long.reflect 动态代理<br>　防火墙代理<br>　智能引用代理<br>　缓存代理<br>　同步代理<br>　写入时复制代理（Copy-On-Write）<br>　复合模式<br>　多个模式一起组合适用<br>　<br>　MVC模式<br>　模型是主题，视图和控制器都是观察者<br>　视图委托控制器处理用户行为，对于视图来说，控制器是策略。<br>　视图是GUI组件的组合<br>　使用适配器将模型适配为符合现有视图和控制器的需要的模型<br>　model 模型<br>　模型实现数据模型和对数据的操纵<br>　模型对视图和控制器一无所知<br>　view 视图<br>　UI<br>　control 控制器<br>　负责和模型和交互来传递用户请求<br>　将用户输入传递给模型作为动作</p>
 
-          
-        
       
     </div>
     
@@ -479,142 +477,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xiangboit.github.io/dream.github.io/2018/06/01/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiangboit">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/dream.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dream">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/dream.github.io/2018/06/01/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-01T11:27:16+08:00">
-                2018-06-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/dream.github.io/tags/设计模式/" rel="tag"># 设计模式</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/dream.github.io/2018/06/01/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -624,10 +516,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -635,6 +528,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -840,6 +737,10 @@
   
 
   
+  <script type="text/javascript" src="/dream.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/dream.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
